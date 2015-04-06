@@ -1,7 +1,3 @@
-# phonegap-bahriinfo
+# bmericc.github.io
 
-
-submodule için sırasıyla
-
-* git submodule init
-* git submodule update
+www.canli.info web sitesi, info.bahri.mobile android ve iphone uygulaması
