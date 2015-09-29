@@ -5,8 +5,11 @@
   <title>TB2BHR - Bahri Meriç CANLI</title>
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1"> 
   <link rel="stylesheet" href="css/jquery.mobile.min.css" />
+  <link rel="stylesheet" href="css/styles.css">
+
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery.mobile.min.js"></script>
+  <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 
   <script>
@@ -20,64 +23,9 @@
 
   </script>
 
-  <style type="text/css"><!--
-
-      #text-content {
-        font-family: arial, verdena, sans-serif;
-        color: #000;
-        text-align: center;
-        background: #FFF;
-        border: dotted 3px #efefef;
-        padding: .85em 2em;
-	      max-width: 500px;
-        width: %100;
-        line-height: 1.5;
-        margin: 0 auto;
-      }
-      #text-content a { color: #999;  }
-
-      .bank-account {
-        font-size: 10pt;
-        color: black;
-      }
-
-      .tags {
-        display: inline-block;
-        line-height: 2;
-        margin: 3px;
-        padding: 3px;
-      }
-
-      .iconLeft a{
-        padding-left: 2.5em !important;
-        padding-right: 1em !important;
-      }
-
-      .iconLeft a:after{
-        right: auto;
-        left: 9px;
-      }
-
-      #formAlert {
-        border: dotted 3px #000;
-        color: #000;
-        text-align: center;
-        background: #FFF;
-        margin: 10px;
-        padding: 10px;
-      }
-
-      #dialog {
-        bottom: 0;
-        position: absolute;
-        width: 75%;
-      }
-
-    --> 
-  </style> 
 </head>
 <body>
-<div data-role="page" id="page1">
+<div data-role="page" id="page1" data-module="home" >
 
   <div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false" data-theme="b">
     <a class="ui-nodisc-icon" href="javascript:togglePanel('sidebar-left');" data-role="button" data-icon="bars" data-iconpos="notext">Menü</a>
@@ -87,18 +35,78 @@
   <div data-role="content" style="padding: .50em !important;">
 
     <div id="text-content">
-    <img src="images/avatar.png" width="150px" height="150px" />
+     <img src="images/avatar.png" width="150px" height="150px" />
     <br/>
 
     <h3>TB2BHR - Bahri Meriç CANLI</h3>
 
     <p>
-      <span class="tags ui-body-b">Web developer</span>
-      <span class="tags ui-body-b">Linux Sys Admin</span>
-      <span class="tags ui-body-b">Mountaineer</span>
-      <span class="tags ui-body-b">Ham radio operator</span>
-      <span class="tags ui-body-b">Motorcycle Driver</span>
-      <span class="tags ui-body-b">Entrepreneur</span>
+      <span class="tags ui-body color color-h">Software Developer</span>
+      <span class="tags ui-body color color-h">Sys Admin</span>
+      <span class="tags ui-body color color-h">Mountaineer</span>
+      <span class="tags ui-body color color-h">Ham radio operator</span>
+      <span class="tags ui-body color color-h">Motorcycle Driver</span>
+      <span class="tags ui-body color color-h">Entrepreneur</span>
+
+      <span class="tags ui-body color color-a">PHP</span>
+      <span class="tags ui-body color color-a">Laravel Framework</span>
+      <span class="tags ui-body color color-a">Yii Framework</span>
+      <span class="tags ui-body color color-a">ASP</span>
+      <span class="tags ui-body color color-a">C++</span>
+      <span class="tags ui-body color color-a">Delphi</span>
+      <span class="tags ui-body color color-a">Visual Basic</span>
+      <span class="tags ui-body color color-a">Javascript</span>
+      <span class="tags ui-body color color-a">JQuery</span>
+      <span class="tags ui-body color color-a">JQuery Mobile</span>
+      <span class="tags ui-body color color-a">Phonegap</span>
+      <span class="tags ui-body color color-a">Cordova</span>
+      <span class="tags ui-body color color-a">Android Webview</span>
+      <span class="tags ui-body color color-a">iOS Webview</span>
+
+      <span class="tags ui-body color color-b">Ms Access</span>
+      <span class="tags ui-body color color-b">MySQL</span>
+      <span class="tags ui-body color color-b">PostgreSQL</span>
+      <span class="tags ui-body color color-b">MsSQL</span>
+      <span class="tags ui-body color color-b">Oracle</span>
+      <span class="tags ui-body color color-b">NoSQL</span>
+
+      <span class="tags ui-body color color-c">Amazon AWS</span>
+      <span class="tags ui-body color color-c">Apache</span>
+      <span class="tags ui-body color color-c">IIS</span>
+      <span class="tags ui-body color color-c">Nginx</span>
+      <span class="tags ui-body color color-c">LightHttpd</span>
+      <span class="tags ui-body color color-c">Cpanel/Whm</span>
+      <span class="tags ui-body color color-c">Plesk</span>
+      <span class="tags ui-body color color-c">Polipo</span>
+      <span class="tags ui-body color color-c">Squid</span>
+      <span class="tags ui-body color color-c">Webmin</span>
+      <span class="tags ui-body color color-c">Postfix</span>
+      <span class="tags ui-body color color-c">Bind</span>
+      <span class="tags ui-body color color-c">PowerDNS</span>
+      <span class="tags ui-body color color-c">Solr</span>
+      <span class="tags ui-body color color-c">Memcache</span>
+
+      <span class="tags ui-body color color-d">Raspberry Pi</span>
+      <span class="tags ui-body color color-d">Arduino</span>
+
+      <span class="tags ui-body color color-e">Adobe Photshop</span>
+      <span class="tags ui-body color color-e">The Gimp</span>
+      <span class="tags ui-body color color-e">Corel Draw</span>
+      <span class="tags ui-body color color-e">Adobe Premier Pro</span>
+
+      <span class="tags ui-body color color-f">Ms Office</span>
+      <span class="tags ui-body color color-f">OpenOffice</span>
+      <span class="tags ui-body color color-f">LibreOffice</span>
+
+      <span class="tags ui-body color color-g">Windows</span>
+      <span class="tags ui-body color color-g">FreeBSD</span>
+      <span class="tags ui-body color color-g">MacOS</span>
+      <span class="tags ui-body color color-g">Linux</span>
+      <span class="tags ui-body color color-g">Debian</span>
+      <span class="tags ui-body color color-g">Ubuntu</span>
+      <span class="tags ui-body color color-g">Pardus</span>
+      <span class="tags ui-body color color-g">Redhat </span>
+      <span class="tags ui-body color color-g">Centos</span>
     </p> 
    
     </div>
@@ -107,20 +115,20 @@
 
   <div data-role="panel" id="sidebar-left" data-position="left" data-display="push" data-theme="b">
     <div class="ui-panel-inner">
-        <img src="images/logo.png" alt="Bahri.Info" height="50" style="margin-bottom:20px; margin-left: 30px;" />
+        <img src="/images/logo.png" alt="Bahri.Info" height="50" style="margin-bottom:20px; margin-left: 30px;" />
         <ul data-role="listview" class="ui-nodisc-icon" data-inset="false">
             <li class="iconLeft" data-icon="home"><a href="#page1" class="show-page-loading-msg">Ana Sayfa</a></li>
             <li class="iconLeft" data-icon="user"><a href="#page2" class="show-page-loading-msg">Özgeçmiş</a></li>
+            <li class="iconLeft" data-icon="social"><a href="#page5" class="show-page-loading-msg">Sosyal Medya</a></li>
             <li class="iconLeft" data-icon="shop"><a href="#page3" class="show-page-loading-msg">Ödeme Bilgileri</a></li>
             <li class="iconLeft" data-icon="info"><a href="#page4" class="show-page-loading-msg">İletişim</a></li>
         </ul>
 
-        <a href="#dialog" data-rel="dialog" data-inline="true" id="dialog" data-role="button" data-mini="true" >Privacy Policy</a>
+        <a href="#dialog" data-rel="dialog" data-inline="true" class="dialog" data-role="button" data-mini="true" >Privacy Policy</a>
     </div>    
   </div>
 
 </div>
-
 
 <div data-role="page" id="page2">
 
@@ -144,17 +152,18 @@
 
   </div>
 
-   <div data-role="panel" id="sidebar-left" data-position="left" data-display="push" data-theme="b">
+  <div data-role="panel" id="sidebar-left" data-position="left" data-display="push" data-theme="b">
     <div class="ui-panel-inner">
-        <img src="images/logo.png" alt="Bahri.Info" height="50" style="margin-bottom:20px; margin-left: 30px;" />
+        <img src="/images/logo.png" alt="Bahri.Info" height="50" style="margin-bottom:20px; margin-left: 30px;" />
            <ul data-role="listview" class="ui-nodisc-icon" data-inset="false">
             <li class="iconLeft" data-icon="home"><a href="#page1" class="show-page-loading-msg">Ana Sayfa</a></li>
             <li class="iconLeft" data-icon="user"><a href="#page2" class="show-page-loading-msg">Özgeçmiş</a></li>
+            <li class="iconLeft" data-icon="social"><a href="#page5" class="show-page-loading-msg">Sosyal Medya</a></li>
             <li class="iconLeft" data-icon="shop"><a href="#page3" class="show-page-loading-msg">Ödeme Bilgileri</a></li>
              <li class="iconLeft" data-icon="info"><a href="#page4" class="show-page-loading-msg">İletişim</a></li>
         </ul>
 
-        <a href="#dialog" data-rel="dialog" data-inline="true" id="dialog" data-role="button" data-mini="true" >Privacy Policy</a>
+        <a href="#dialog" data-rel="dialog" data-inline="true" class="dialog" data-role="button" data-mini="true" >Privacy Policy</a>
     </div>    
   </div>
 
@@ -307,20 +316,20 @@
 
   </div>
 
-    <div data-role="panel" id="sidebar-left" data-position="left" data-display="push" data-theme="b">
+   <div data-role="panel" id="sidebar-left" data-position="left" data-display="push" data-theme="b">
     <div class="ui-panel-inner">
-        <img src="images/logo.png" alt="Bahri.Info" height="50" style="margin-bottom:20px; margin-left: 30px;" />
+        <img src="/images/logo.png" alt="Bahri.Info" height="50" style="margin-bottom:20px; margin-left: 30px;" />
            <ul data-role="listview" class="ui-nodisc-icon" data-inset="false">
             <li class="iconLeft" data-icon="home"><a href="#page1" class="show-page-loading-msg">Ana Sayfa</a></li>
             <li class="iconLeft" data-icon="user"><a href="#page2" class="show-page-loading-msg">Özgeçmiş</a></li>
+            <li class="iconLeft" data-icon="social"><a href="#page5" class="show-page-loading-msg">Sosyal Medya</a></li>
             <li class="iconLeft" data-icon="shop"><a href="#page3" class="show-page-loading-msg">Ödeme Bilgileri</a></li>
              <li class="iconLeft" data-icon="info"><a href="#page4" class="show-page-loading-msg">İletişim</a></li>
         </ul>
 
-        <a href="#dialog" data-rel="dialog" data-inline="true" id="dialog" data-role="button" data-mini="true" >Privacy Policy</a>
+        <a href="#dialog" data-rel="dialog" data-inline="true" class="dialog" data-role="button" data-mini="true" >Privacy Policy</a>
     </div>    
   </div>
-
 
 
 </div>
@@ -369,17 +378,120 @@
 
   </div>
 
-   <div data-role="panel" id="sidebar-left" data-position="left" data-display="push" data-theme="b">
+  <div data-role="panel" id="sidebar-left" data-position="left" data-display="push" data-theme="b">
     <div class="ui-panel-inner">
-        <img src="images/logo.png" alt="Bahri.Info" height="50" style="margin-bottom:20px; margin-left: 30px;" />
+        <img src="/images/logo.png" alt="Bahri.Info" height="50" style="margin-bottom:20px; margin-left: 30px;" />
            <ul data-role="listview" class="ui-nodisc-icon" data-inset="false">
             <li class="iconLeft" data-icon="home"><a href="#page1" class="show-page-loading-msg">Ana Sayfa</a></li>
             <li class="iconLeft" data-icon="user"><a href="#page2" class="show-page-loading-msg">Özgeçmiş</a></li>
+            <li class="iconLeft" data-icon="social"><a href="#page5" class="show-page-loading-msg">Sosyal Medya</a></li>
             <li class="iconLeft" data-icon="shop"><a href="#page3" class="show-page-loading-msg">Ödeme Bilgileri</a></li>
              <li class="iconLeft" data-icon="info"><a href="#page4" class="show-page-loading-msg">İletişim</a></li>
         </ul>
 
-        <a href="#dialog" data-rel="dialog" data-inline="true" id="dialog" data-role="button" data-mini="true" >Privacy Policy</a>
+        <a href="#dialog" data-rel="dialog" data-inline="true" class="dialog" data-role="button" data-mini="true" >Privacy Policy</a>
+    </div>    
+  </div>
+
+</div>
+
+
+<div data-role="page" id="page5" data-module="timeline">
+  
+  <div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false" data-theme="b">
+    <a class="ui-nodisc-icon" href="javascript:togglePanel('sidebar-left');" data-role="button" data-icon="bars" data-iconpos="notext">Menü</a>
+     <h1 id="tabTimelineName">Sosyal Medya</h1>
+  </div>
+
+  <div data-role="content" style="padding: .50em !important;">
+    <div class="social-list">
+        <ul data-role="listview" data-inset="true" data-theme="a" data-icon="false" id="timelineContent">
+    </ul>   
+  </div>
+</div>
+
+<script type="text/javascript">
+$('[data-module="timeline"]' ).on('pageinit', function(event, ui) {
+  
+  var zaman = new Date().getTime();
+  $.getJSON( 'http://app-jsons.s3-eu-west-1.amazonaws.com/apps/a87f/a87ff679a2f3e71d9181a67b7542122c/timeline/a87ff679a2f3e71d9181a67b7542122c_timeline_data.json?'+zaman, function(data) {     
+    var content = new Object();
+    content.data = data;
+    $("#timelineBasePage").tmpl(content).appendTo($("#timelineContent")); 
+    $("#timelineContent").listview("refresh");
+  }).fail(function( jqxhr, textStatus, error ) {
+           var err = textStatus + ", " + error;
+             console.log( "Request Failed: " + err );
+  })
+  .always(function() {
+    
+  }); 
+  
+});
+</script>
+<script id="timelineBasePage" type="text/x-jquery-tmpl">
+{{each(i, line) data}}
+  {{if line.service=="facebook"}}
+    <li class="${line.service}">
+      <a href="javascript:feedsURL('${line.url}');">
+        <p class="ui-li-aside ui-icon-fa-${line.service}">{{html tarih(line.timestamp) }}</p>
+        {{html line.text}}
+        {{html line.content}}
+      </a>
+    </li>
+  {{/if}}
+  {{if line.service=="twitter"}}
+    <li class="${line.service}">
+      <a href="javascript:feedsURL('${line.url}');">
+        <p class="ui-li-aside ui-icon-fa-${line.service}">{{html tarih(line.timestamp) }}</p>
+        ${line.text}
+      </a>
+    </li>
+  {{/if}}
+  {{if line.service=="instagram"}}
+    <li class="${line.service}">
+      <a href="javascript:feedsURL('${line.link}');">
+        <p class="ui-li-aside ui-icon-fa-${line.service}">{{html tarih(line.timestamp) }}</p>       
+        <img src="${line.img_low}"/>
+        ${line.text}
+      </a>
+    </li>
+  {{/if}}
+  {{if line.service=="youtube"}}
+    <li class="${line.service}">
+      <a href="javascript:feedsURL('${line.url}');">
+        <p class="ui-li-aside ui-icon-fa-${line.service}">{{html tarih(line.timestamp) }}</p>
+        {{html line.content}}
+      </a>
+    </li>
+  {{/if}}
+  {{if line.service=="rss"}}
+    <li class="${line.service}">
+      <a href="javascript:feedsURL('${line.url}');">
+        <p class="ui-li-aside ui-icon-fa-${line.service}">{{html tarih(line.timestamp) }}</p>
+        <img src="${line.img}"/>
+        ${line.text}
+      </a>
+    </li>
+  {{/if}}   
+{{/each}}
+</script>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-update-page-padding ="false"  data-theme="b">
+</div>
+
+
+ <div data-role="panel" id="sidebar-left" data-position="left" data-display="push" data-theme="b">
+    <div class="ui-panel-inner">
+        <img src="/images/logo.png" alt="Bahri.Info" height="50" style="margin-bottom:20px; margin-left: 30px;" />
+           <ul data-role="listview" class="ui-nodisc-icon" data-inset="false">
+            <li class="iconLeft" data-icon="home"><a href="#page1" class="show-page-loading-msg">Ana Sayfa</a></li>
+            <li class="iconLeft" data-icon="user"><a href="#page2" class="show-page-loading-msg">Özgeçmiş</a></li>
+            <li class="iconLeft" data-icon="social"><a href="#page5" class="show-page-loading-msg">Sosyal Medya</a></li>
+            <li class="iconLeft" data-icon="shop"><a href="#page3" class="show-page-loading-msg">Ödeme Bilgileri</a></li>
+             <li class="iconLeft" data-icon="info"><a href="#page4" class="show-page-loading-msg">İletişim</a></li>
+        </ul>
+
+        <a href="#dialog" data-rel="dialog" data-inline="true" class="dialog" data-role="button" data-mini="true" >Privacy Policy</a>
     </div>    
   </div>
 
